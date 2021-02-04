@@ -1,0 +1,12 @@
+.form input {
+  border: 1px solid #c5cacb;
+}
+
+.form label {
+  width: 160px;
+  margin-right: 10px;
+}
+
+.form div {
+  margin-top: 10px;
+}
