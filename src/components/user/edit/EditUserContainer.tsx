@@ -4,7 +4,7 @@ import axios from "axios";
 import { EditUser } from "./EditUser";
 import baseApiUrl from "../../../baseApiUrl";
 
-type EditUserContainerProps = {
+export type EditUserContainerProps = {
   userId: number;
   onBack: () => void;
 };
@@ -39,4 +39,4 @@ const EditUserContainer = (props: EditUserContainerProps) => {
   );
 };
 
-export { EditUserContainerProps, EditUserContainer };
+export {  EditUserContainer };

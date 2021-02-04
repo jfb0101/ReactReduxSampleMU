@@ -1,7 +1,7 @@
 import { User } from "../../../models/User";
 import React from "react";
 
-type ListUsersProps = {
+export type ListUsersProps = {
   users: User[];
   onUserSelected: (userId: number) => void;
   onEditUser: (userId: number) => void;
@@ -40,4 +40,5 @@ const ListUsers = (props: ListUsersProps) => {
   );
 };
 
-export { ListUsers, ListUsersProps };
+export { ListUsers }
+

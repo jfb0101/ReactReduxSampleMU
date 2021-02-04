@@ -1,7 +1,7 @@
 import React from "react";
 import { User } from "../../models/User";
 
-type TopBarProps = {
+export type TopBarProps = {
   currentUser: User;
   numberOfPosts: number;
 };
@@ -27,4 +27,4 @@ const TopBar = (props: TopBarProps) => {
   );
 };
 
-export { TopBar, TopBarProps };
+export { TopBar };

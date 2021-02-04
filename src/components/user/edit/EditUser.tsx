@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { User } from "../../../models/User";
 const styles = require("./editUser.module.css");
 
-type EditUserProps = {
+export type EditUserProps = {
   user: User;
 
   onUserEdited: (user: User) => void;
@@ -47,4 +47,4 @@ const EditUser = (props: EditUserProps) => {
   );
 };
 
-export { EditUser, EditUserProps };
+export { EditUser };
