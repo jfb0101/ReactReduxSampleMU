@@ -1,7 +1,7 @@
 import { Post } from "../../models/Post";
 import * as R from "ramda";
 
-export function postsReducer(posts: Post[] = [], action): Post[] {
+export function postsReducer(posts: Post[] = [], action: any): Post[] {
   switch (action.type) {
     case "REPLACE_POSTS":
       return action.posts;
