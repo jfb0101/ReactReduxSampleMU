@@ -1,7 +1,7 @@
 import { Post } from "./Post";
 import { User } from "./User";
 
-export type IStore = {
+export type StoreStructure = {
   currentUser: User;
   posts: Post[];
 };
