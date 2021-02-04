@@ -4,6 +4,7 @@ import React from "react";
 type ListUsersProps = {
   users: User[];
   onUserSelected: (userId: number) => void;
+  onEditUser: (userId: number) => void;
 };
 
 const ListUsers = (props: ListUsersProps) => {
@@ -14,6 +15,7 @@ const ListUsers = (props: ListUsersProps) => {
           <tr>
             <th>ID</th>
             <th>Name</th>
+            <th></th>
           </tr>
         </thead>
         <tbody>
@@ -25,6 +27,11 @@ const ListUsers = (props: ListUsersProps) => {
             >
               <td>{user.id}</td>
               <td>{user.name}</td>
+              <td>
+                <button onClick={() => props.onEditUser(user.id)}>
+                  <span className="material-icons">edit</span>
+                </button>
+              </td>
             </tr>
           ))}
         </tbody>

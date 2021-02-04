@@ -6,7 +6,11 @@ import baseApiUrl from "../../../baseApiUrl";
 import { ListUsers } from "./ListUsers";
 import { store } from "../../../redux/store";
 
-const ListUsersContainer = () => {
+type ListUsersContainerProps = {
+  onEditUser: (userId: number) => void;
+};
+
+const ListUsersContainer = (props: ListUsersContainerProps) => {
   const [users, setUsers] = useState<User[]>([]);
 
   const getUserPosts = async (userId: number): Promise<Post[]> => {
@@ -42,7 +46,13 @@ const ListUsersContainer = () => {
     loadUsers();
   }, []);
 
-  return <ListUsers users={users} onUserSelected={onUserSelected} />;
+  return (
+    <ListUsers
+      users={users}
+      onUserSelected={onUserSelected}
+      onEditUser={props.onEditUser}
+    />
+  );
 };
 
 export { ListUsersContainer };

@@ -6,6 +6,7 @@ import baseApiUrl from "../../../baseApiUrl";
 
 type EditUserContainerProps = {
   userId: number;
+  onBack: () => void;
 };
 
 const EditUserContainer = (props: EditUserContainerProps) => {
@@ -30,6 +31,7 @@ const EditUserContainer = (props: EditUserContainerProps) => {
       {user != null && (
         <EditUser
           user={user}
+          onBack={props.onBack}
           onUserEdited={(user) => console.log(JSON.stringify(user, null, 2))}
         />
       )}

@@ -14,10 +14,13 @@ const TopBar = (props: TopBarProps) => {
         top: "0px",
         height: "50px",
         display: "flex",
-        flexDirection: "row"
+        flexDirection: "row",
+        justifyContent: "space-around"
       }}
     >
-      <div>{props.currentUser?.name}</div>
+      <div>
+        {props.currentUser?.name} - {props.currentUser?.email}
+      </div>
 
       <div>{props.numberOfPosts || 0} posts</div>
     </div>

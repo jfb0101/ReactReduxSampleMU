@@ -1,11 +1,12 @@
 import React, { useState } from "react";
-import { User } from "../models/User";
+import { User } from "../../../models/User";
 const styles = require("./editUser.module.css");
 
 type EditUserProps = {
   user: User;
 
   onUserEdited: (user: User) => void;
+  onBack: () => void;
 };
 
 const EditUser = (props: EditUserProps) => {
@@ -13,6 +14,9 @@ const EditUser = (props: EditUserProps) => {
 
   return (
     <>
+      <button onClick={props.onBack}>
+        <span className="material-icons">arrow_back</span>
+      </button>
       <form className={styles.form}>
         <div>
           <label>Name</label>
